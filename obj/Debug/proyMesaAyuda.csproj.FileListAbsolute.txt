@@ -1,0 +1,6 @@
+D:\Proyectos\MesaAyuda\proyMesaAyuda\bin\proyMesaAyuda.dll.config
+D:\Proyectos\MesaAyuda\proyMesaAyuda\bin\proyMesaAyuda.dll
+D:\Proyectos\MesaAyuda\proyMesaAyuda\bin\proyMesaAyuda.pdb
+D:\Proyectos\MesaAyuda\proyMesaAyuda\obj\Debug\proyMesaAyuda.csprojResolveAssemblyReference.cache
+D:\Proyectos\MesaAyuda\proyMesaAyuda\obj\Debug\proyMesaAyuda.dll
+D:\Proyectos\MesaAyuda\proyMesaAyuda\obj\Debug\proyMesaAyuda.pdb

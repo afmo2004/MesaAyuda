@@ -1,0 +1,174 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Ayuda.master.cs" Inherits="proyMesaAyuda.View.Ayuda" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <!-- Fuentes de google -->
+    
+   <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" />
+    <style type="text/css">
+        body{margin-top:50px;}
+        .glyphicon { margin-right:10px; }
+        .panel-body { padding:0px; }
+        .panel-body table tr td { padding-left: 10px;}
+        .panel-body .table {margin-bottom: 0px; }
+    </style>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+
+
+    <link href="<%=ResolveClientUrl("~/Style/jqx.base.css") %>" rel="stylesheet" />
+    <link href="<%=ResolveClientUrl("~/Style/jqx.arctic.css") %>" rel="stylesheet" />
+    <link href="<%=ResolveClientUrl("~/Style/pagina.base.css" ) %>" rel="stylesheet" />
+
+    <script src="<%=ResolveClientUrl("~/Script/jquery-1.11.1.min.js") %>"></script>
+    <script src="<%=ResolveClientUrl("~/Script/jqx-all.js") %>"></script>
+  
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <script type="text/javascript">
+        nombreTema = 'arctic';
+        $(document).ready(function () {
+            $('#splitContainer').jqxSplitter({ height: '99%', width: '99.4%', orientation: 'horizontal', panels: [{ size: '20%' }, { size: '80%' }], theme: nombreTema });
+            $('#nestedSplitter').jqxSplitter({ height: '100%', width: '100%', panels: [{ size: '15%' }, { size: '85%' }], theme: nombreTema });
+            $('#menuIzquierda').jqxExpander({ height: '100%', width: '100%', toggleMode: 'none', showArrow: false, theme: nombreTema });
+            $('#panelResultado').jqxExpander({ height: '80%', width: '100%', toggleMode: 'none', showArrow: false, theme: nombreTema });
+        });
+
+    </script>
+
+     <!-- Acción sobre el botón con id=boton y actualizamos el div con id=capa -->
+	<script type="text/javascript">
+	    $(document).ready(function () {
+	        $("#webIncidente").click(function (event) {
+	            $("#derecha2").load('/View/webRegistro.aspx');
+	        });
+	    });
+	</script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="Contenedor">
+            <div id="splitContainer" style="position:absolute">
+                <div>                    
+
+                </div>
+                <div>
+                    <div id="nestedSplitter">
+                        <div>                         
+                            <div id="menuIzquierda" >
+                                    <div>Menu del Sistema</div>
+                                        <div class="col-sm-3 col-md-3" style="width:100%; padding:0px;" >
+                                            <div class="panel-group" id="accordion">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title">
+                                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="collapsed"><span class="glyphicon glyphicon-folder-close">
+                                                            </span>Incidente</a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseOne" class="panel-collapse collapse" style="height: 0px;">
+                                                        <div class="panel-body">
+                                                            <table class="table">
+                                                                <tbody><tr>
+                                                                    <td>
+                                                                        <span class="glyphicon glyphicon-pencil text-primary"></span><a name="webIncidente" id="webIncidente" href="#">Registro</a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <span class="glyphicon glyphicon-flash text-success"></span><a href="#">News</a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <span class="glyphicon glyphicon-file text-info"></span><a href="#">Newsletters</a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <span class="glyphicon glyphicon-comment text-success"></span><a href="#">Comments</a>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody></table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title">
+                                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="collapsed"><span class="glyphicon glyphicon-user">
+                                                            </span>Cuenta</a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseThree" class="panel-collapse collapse" style="height: 0px;">
+                                                        <div class="panel-body">
+                                                            <table class="table">
+                                                                <tbody><tr>
+                                                                    <td>
+                                                                        <a href="#">Cambio de Clave</a>
+                                                                    </td>
+                                                                </tr>
+                                                            
+                                                            </tbody></table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title">
+                                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" class="collapsed"><span class="glyphicon glyphicon-file">
+                                                            </span>Reportes</a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseFour" class="panel-collapse collapse" style="height: 0px;">
+                                                        <div class="panel-body">
+                                                            <table class="table">
+                                                                <tbody><tr>
+                                                                    <td>
+                                                                        <span class="glyphicon glyphicon-usd"></span><a href="#">Sales</a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <span class="glyphicon glyphicon-user"></span><a href="#">Customers</a>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody></table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                  
+                                </div> <!-- menuIzquierda -->
+                        
+                        </div>
+
+                        <div>
+                            <div id="panelResultado">
+                                <div>Registro de Incidentes</div>
+                                <div id="derecha2"></div>
+                            </div>
+                            <div></div>
+                            <asp:ContentPlaceHolder ID="ContentEditable" runat="server" >
+        
+                            </asp:ContentPlaceHolder>
+
+                        </div>
+
+                    </div><!-- nestedSplitter -->
+                </div>
+            </div> <!-- splitContainer -->
+        </div> <!-- Contenedor -->
+
+    </form>
+    
+</body>
+</html>
