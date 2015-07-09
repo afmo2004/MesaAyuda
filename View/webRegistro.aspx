@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
     <title></title>
 
     <script type="text/javascript">
@@ -27,11 +28,28 @@
     <link href="../Style/StyleGridView.css" rel="stylesheet" />
 </head>
 <body>
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display:none;" data-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                    <h4 class="modal-title" id="myModalLabel">Nuevo Registro de Incidencia</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-content">
+                        Cargando.....
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
+
     <form id="form1" runat="server">
-        <div id="botones">
-
+        <div id="btnCRUD">
+            <a id="btnNuevo" data-toggle="modal" href="#myModal" class="btn  btn-default"> <span class="glyphicon glyphicon-list-alt"></span>Nuevo</a>
+            <a id="btnEditar" data-toggle="modal" href="#myModal" class="btn  btn-default"> <span class="glyphicon glyphicon-pencil"></span>Editar</a>
+            <a id="btnEliminar" data-toggle="modal" href="#myModal" class="btn  btn-default"> <span class="glyphicon glyphicon-trash"></span>Eliminar</a>
         </div>
-
         <div>
         <asp:GridView ID="grvIncidente" runat="server" AutoGenerateColumns="False" CssClass="mGrid">
             <Columns>
