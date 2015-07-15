@@ -26,17 +26,18 @@
         }
     </script>
     <link href="../Style/StyleGridView.css" rel="stylesheet" />
+    <script src="../Script/Categoria/categoria.js"></script>
 </head>
 <body>
     <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display:none;" data-backdrop="static">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
                     <h4 class="modal-title" id="myModalLabel">Nuevo Registro de Incidencia</h4>
                 </div>
                 <div class="modal-body">
-                    <div class="modal-content">
+                    <div id="modal-content">
                         Cargando.....
                     </div>
                 </div>
@@ -77,5 +78,8 @@
         </div>
    
     </form>
+  
+    
+   
 </body>
 </html>

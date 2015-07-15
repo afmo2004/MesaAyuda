@@ -59,10 +59,12 @@
   <ItemGroup>
     <Content Include="Script\bootstrap.js" />
     <Content Include="Script\bootstrap.min.js" />
+    <Content Include="Script\Categoria\categoria.js" />
     <Content Include="Script\jquery-1.11.1.min.js" />
     <Content Include="Script\jquery.min.js" />
     <Content Include="Script\jqx-all.js" />
     <Content Include="Script\main.js" />
+    <Content Include="Script\responsive.js" />
     <Content Include="Style\bootstrap-responsive.css" />
     <Content Include="Style\bootstrap.css" />
     <Content Include="Style\bootstrap.min.css" />
@@ -73,6 +75,7 @@
     <Content Include="Style\pagina.base.css" />
     <Content Include="Style\fissal.css" />
     <Content Include="Style\StyleGridView.css" />
+    <Content Include="View\crud\create.html" />
     <Content Include="View\prueba.html" />
     <Content Include="View\WebPrincipal.aspx" />
     <Content Include="View\webRegistro.aspx" />
